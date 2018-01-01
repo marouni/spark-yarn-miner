@@ -4,7 +4,7 @@ CPU Mining cryptocurrencies using Apache Spark without any external dependencies
 ![](http://dogecoin.com/imgs/dogecoin-300.png "Dogecoin") ![](https://spark.apache.org/images/spark-logo-trademark.png "Apache Spark")
 
 # Overview
-Using [CPU Miner](https://github.com/pooler/cpuminer) from https://github.com/pooler/cpuminer in an Apache Spark job that starts tasks on a Yarn/Mesos cluster. Each cluster executor starts and an instance of CPU Miner using the provided mining options.
+Using [CPU Miner](https://github.com/pooler/cpuminer) from https://github.com/pooler/cpuminer in an Apache Spark job that starts tasks on a Yarn/Mesos cluster. Each cluster executor starts an instance of CPU Miner using the provided mining options.
 
 # Usage
 ## Mining pools
@@ -31,9 +31,9 @@ spark-submit --master yarn --class fr.marouni.spark.coins.SparkYarnMiner spark-y
 ```
 Where :
 * `--url` : Your mining pool URL (check mining pool docs). Example : stratum+tcp://stratum.aikapool.com:7915
-* --username : Mining pool account username
-* --worker-id : Mining pool worker id (check mining pool docs)
-* --password : Mining pool account password
+* `--username` : Mining pool account username
+* `--worker-id` : Mining pool worker id (check mining pool docs)
+* `--password` : Mining pool account password
 
 ## Tuning
 Tune your mining with the following `spark-submit` options :
